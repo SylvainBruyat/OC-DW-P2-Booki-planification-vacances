@@ -1,4 +1,120 @@
-html {
+/********************
+** Styles généraux **
+********************/
+
+/*********************************************************************************
+*** Voir pour créer un flex.css pour créer des classes pré-configurées de flex ***
+*********************************************************************************/
+
+* {
     box-sizing: border-box;
+}
+
+body {
     font-family: 'Raleway', sans-serif;
+    margin: 0 0;
+}
+
+/*********************
+** Styles du header **
+*********************/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px 50px; 
+}
+
+header img {
+    padding: 85px 20px;
+}
+
+header nav {
+    padding: 85px 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    padding: 99px 15px;
+}
+
+.nav-accomodations {
+    color: var(--primary-blue);
+    border-top: 2px solid var(--primary-blue);
+}
+
+/*******************
+** Styles du main **
+*******************/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%; /*********************** A remplacer par du padding ***********************/
+
+    background-color: green; /*********************** A supprimer avant livraison ***********************/
+}
+
+h1 {
+    margin: 0px;
+    padding: 5px;
+}
+
+p {
+    margin: 0px;
+    padding: 5px;
+}
+
+.fas {
+    color: var(--primary-blue);
+}
+
+.icon-black {
+    color: black;
+}
+
+.button-search {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+/* .filters {
+    display: flex;
+    align-items: center;
+}
+
+.buttons-filters {
+    display: flex;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+}
+
+.list-accomodations {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 50%;
+}
+
+.star-grey {
+    color: var(--custom-grey);
+}
+ */
+
+
+/*********************
+** Styles du footer **
+*********************/
+
+footer {
+    background-color: var(--custom-grey);
 }
