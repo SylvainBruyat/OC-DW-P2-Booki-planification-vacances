@@ -1,10 +1,6 @@
-/********************
-** Styles généraux **
-********************/
-
-/*********************************************************************************
-*** Voir pour créer un flex.css pour créer des classes pré-configurées de flex ***
-*********************************************************************************/
+/************************************
+********** Styles généraux **********
+************************************/
 
 * {
     box-sizing: border-box;
@@ -12,66 +8,89 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    margin: 0 0;
+    margin: 0 auto;
 }
 
-/*********************
-** Styles du header **
-*********************/
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0px 50px; 
+a {
+    text-decoration: none;
+    color: black;
 }
 
-header img {
-    padding: 85px 20px;
-}
-
-header nav {
-    padding: 85px 20px;
-}
-
-nav ul {
-    display: flex;
+ul {
     list-style: none;
 }
 
-nav a {
-    text-decoration: none;
-    color: black;
-    padding: 99px 15px;
+h3 {
+    margin: 0px;
+    padding: 5px 10px;
+    font-size: 18px;
 }
 
-.nav-accomodations {
+p {
+    margin: 0;
+}
+
+.shadow {
+    box-shadow: 0px 0px 5px 5px var(--secondary-grey);
+}
+
+/*************************************
+********** Styles du header **********
+*************************************/
+
+header {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 66px;
+}
+
+header img {
+    padding: 30px 26px;
+    height: 120px;
+}
+
+header nav {
+    padding: 25px 20px;
+}
+
+nav a {
+    margin: 0 10px;
+    padding: 39px 30px;
+}
+
+nav a:hover {
     color: var(--primary-blue);
     border-top: 2px solid var(--primary-blue);
 }
 
-/*******************
-** Styles du main **
-*******************/
+/***********************************
+********** Styles du main **********
+***********************************/
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%; /*********************** A remplacer par du padding ***********************/
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0px 66px;
+}
 
-    background-color: green; /*********************** A supprimer avant livraison ***********************/
+/* Styles de la section
+Recherche et filtre **/
+
+.section-search-filter {
+    width: 100%;
 }
 
 h1 {
-    margin: 0px;
-    padding: 5px;
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 24px;
 }
 
-p {
-    margin: 0px;
-    padding: 5px;
+.section-search-filter p {
+    padding: 5px 10px;
 }
 
+/* Couleur par défaut des icônes */
 .fas {
     color: var(--primary-blue);
 }
@@ -80,41 +99,313 @@ p {
     color: black;
 }
 
+.form-search {
+    padding: 15px 10px;
+}
+
+.fa-map-marker-alt {
+    background-color: var(--primary-grey);
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 15px 0 0 15px;
+}
+
+#location {
+    width: 250px;
+    border: 2px solid var(--primary-grey);
+    padding: 15px;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Bouton de recherche avec texte - visible en version desktop */
 .button-search {
     background-color: var(--primary-blue);
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: bold;
     color: white;
+    padding: 0 20px;
+    border: 1px solid var(--primary-blue);
+    border-radius: 0 15px 15px 0;
 }
 
-/* .filters {
-    display: flex;
-    align-items: center;
+.button-search:hover {
+    cursor: pointer;
 }
 
-.buttons-filters {
-    display: flex;
+ .section-filters {
+    font-weight: bold;
 }
 
-.info {
-    display: flex;
-    align-items: center;
+.section-filters h3 {
+    padding: 20px;
 }
 
-.list-accomodations {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 50%;
+.filter {
+    height: 50px;
+    border-top: 3px solid var(--primary-grey);
+    border-right: 3px solid var(--primary-grey);
+    border-bottom: 3px solid var(--primary-grey);
+    border-radius: 25px;
+    margin: 15px;
 }
 
-.star-grey {
-    color: var(--custom-grey);
+.filter:hover {
+    background-color: var(--secondary-blue);
+    border-top: 3px solid var(--secondary-blue);
+    border-right: 3px solid var(--secondary-blue);
+    border-bottom: 3px solid var(--secondary-blue);
+    cursor: pointer;
 }
- */
 
+button {
+    padding: 10px 20px;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: white;
+    border: 0;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+}
 
-/*********************
-** Styles du footer **
-*********************/
+.filter:hover button {
+    background-color: var(--secondary-blue);
+    
+}
+
+.filter-icons {
+    background-color: var(--secondary-blue);
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+.fa-info {
+    height: 30px;
+    width: 30px;
+    border: 2px solid var(--primary-grey);
+    border-radius: 15px;
+    margin: 0 10px;
+}
+
+.info p {
+    padding: 0;
+}
+
+.pets {
+    white-space: nowrap;
+}
+
+/* Styles de la section
+ Hébergements ********/
+
+ #accomodations {
+     margin-bottom: 20px;
+ }
+
+ #accomodations a {
+    margin: 15px 0;
+}
+
+#accomodations h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.panel-accomodations {
+    flex: 2;
+    background-color: var(--primary-grey);
+    border-radius: 30px;
+    margin: 1.5% 2.3% 1.5% 0;
+    padding: 1.5% 2.6%;
+}
+
+.list-accomodations a {
+    width: 31%;
+}
+
+.card-accomodation {
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 30px;
+}
+
+.picture-box-accomodation {
+    margin: 0;
+    height: 130px;
+    border-radius: 25px 25px 0 0;
+}
+
+.card-accomodation img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+}
+
+.price, .card-accomodation h3, .card-accomodation div {
+    padding: 5px 0 5px 10px;
+}
+
+ .star-grey {
+    color: var(--secondary-grey);
+}
+
+.panel-accomodations h3:last-child {
+    font-size: 20px;
+    margin-top: 3%;
+}
+
+.panel-populars {
+    flex: 1;
+    background-color: var(--primary-grey);
+    border-radius: 30px;
+    margin: 1.5% 0;
+    padding: 1.5% 2.6%;
+}
+
+.panel-populars a {
+    width: 100%;
+}
+
+.card-popular {
+    width: 100%;
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 30px;
+}
+
+.picture-box-popular {
+    margin: 0;
+    height: 160px;
+    width: 40%;
+    border-radius: 25px 0 0 25px;
+}
+
+.picture-box-popular img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 25px 0 0 25px;
+}
+
+.description-popular {
+    width: 60%;
+    height: 160px;
+}
+
+.description-popular h3, .description-popular p, .description-popular div {
+    padding-left: 20px;
+}
+
+.description-popular h3 {
+    margin-top: 10px;
+}
+
+.description-popular div {
+    margin-top: 20%;
+    margin-bottom: 10px;
+}
+
+/* Styles de la section
+ Activités ********/
+
+#activities {
+    margin-bottom: 80px;
+    padding: 0 5px;
+}
+
+.activities-list {
+    width: 100%;
+    height: 500px;
+}
+
+.bloc-activities {
+    width: 22%;
+}
+
+.card-activities-full,
+.card-activities-two-thirds,
+.card-activities-one-third,
+.card-activities-upper-half,
+.card-activities-lower-half {
+    border-radius: 30px;
+}
+
+.card-activities-two-thirds, .card-activities-upper-half {
+    margin-bottom: 40px;
+}
+
+.picture-box-activities-full {
+    height: 390px;
+}
+
+.picture-box-activities-two-thirds {
+    height: 190px;
+}
+
+.picture-box-activities-one-third {
+    height: 100px;
+}
+
+.picture-box-activities-upper-half {
+    height: 145px;
+}
+
+.picture-box-activities-lower-half {
+    height: 145px;
+}
+
+.card-activities-full img,
+.card-activities-two-thirds img,
+.card-activities-one-third img,
+.card-activities-upper-half img,
+.card-activities-lower-half img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30px 30px 0 0;
+}
+
+.activities-list h3 {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+}
+
+/*************************************
+********** Styles du footer **********
+*************************************/
 
 footer {
-    background-color: var(--custom-grey);
+    background-color: var(--primary-grey);
+    padding: 50px 0;
+}
+
+.footer-content {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 66px;
+}
+
+.footer-content div {
+    margin: 0 20% 0 0;
+}
+
+footer h3 {
+    margin: 0 0 25px 0;
+    padding: 0;
+}
+
+footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+footer li {
+    margin-top: 15px;
 }
