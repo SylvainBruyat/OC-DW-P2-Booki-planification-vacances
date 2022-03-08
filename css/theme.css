@@ -1,6 +1,13 @@
 :root {
+    /* Couleurs */
     --primary-blue: #0065fc;
     --secondary-blue: #deebff;
     --primary-grey: #f2f2f2;
     --secondary-grey: #d9d9d9;
+    /* Bordures */
+    --border-grey-2pixels: 2px solid var(--primary-grey);
+    --border-grey-3pixels: 3px solid var(--primary-grey);
+    --border-blue-2pixels: 2px solid var(--primary-blue);
+    --border-sec-blue-3pixels: 3px solid var(--secondary-blue);
+    --border-white-5pixels: 5px solid white;
 }

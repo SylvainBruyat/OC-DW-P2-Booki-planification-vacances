@@ -1,14 +1,18 @@
-/************************************
-********** Styles généraux **********
-************************************/
-
+/********** Styles généraux **********/
 * {
     box-sizing: border-box;
 }
 
+.margin-zero {
+    margin: 0;
+}
+
+.margin-zero-auto {
+    margin: 0 auto;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
-    margin: 0 auto;
 }
 
 a {
@@ -21,7 +25,7 @@ ul {
 }
 
 h3 {
-    margin: 0px;
+    margin: 0;
     padding: 5px 10px;
     font-size: 18px;
 }
@@ -30,28 +34,37 @@ p {
     margin: 0;
 }
 
-.shadow {
-    box-shadow: 0px 0px 5px 5px var(--secondary-grey);
+.stronger {
+    font-weight: bold;
 }
 
-/*************************************
-********** Styles du header **********
-*************************************/
+.shadow {
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px 3px var(--secondary-grey);
+}
 
+.shadow:hover {
+    box-shadow: 0px 0px 2px 5px var(--secondary-grey);
+}
+
+.shadow:hover img {
+    transform: scale(1.1);
+}
+
+/********** Styles du header **********/
 header {
     max-width: 1920px;
     width: 100%;
-    margin: 0 auto;
     padding: 0px 66px;
 }
 
 header img {
-    padding: 30px 26px;
-    height: 120px;
+    margin: 30px 0;
+    height: 60px;
 }
 
-header nav {
-    padding: 25px 20px;
+nav {
+    margin: 25px 20px;
 }
 
 nav a {
@@ -59,35 +72,37 @@ nav a {
     padding: 39px 30px;
 }
 
-nav a:hover {
+.active-menu {
     color: var(--primary-blue);
-    border-top: 2px solid var(--primary-blue);
+    border-top: var(--border-blue-2pixels);
 }
 
-/***********************************
-********** Styles du main **********
-***********************************/
+nav a:hover {
+    color: var(--primary-blue);
+    border-top: var(--border-blue-2pixels);
+}
+
+/********** Styles du main **********/
 main {
     max-width: 1920px;
-    margin: 0 auto;
     padding: 0px 66px;
 }
 
-/* Styles de la section
-Recherche et filtre **/
-
+/** Styles de la section Recherche et filtre **/
 .section-search-filter {
     width: 100%;
 }
 
-h1 {
+.h1-intro {
     padding: 5px 10px;
-    margin: 0;
+}
+
+h1 {
     font-size: 24px;
 }
 
-.section-search-filter p {
-    padding: 5px 10px;
+.h1-intro p {
+    padding-top: 5px;
 }
 
 /* Couleur par défaut des icônes */
@@ -104,6 +119,7 @@ h1 {
 }
 
 .fa-map-marker-alt {
+    width: 60px;
     background-color: var(--primary-grey);
     font-size: 20px;
     padding: 20px;
@@ -112,14 +128,16 @@ h1 {
 
 #location {
     width: 250px;
-    border: 2px solid var(--primary-grey);
-    padding: 15px;
+    border-top: var(--border-grey-2pixels);
+    border-right: 0;
+    border-bottom: var(--border-grey-2pixels);
+    border-left: var(--border-grey-2pixels);
+    padding: 0 15px;
     font-family: inherit;
     font-size: 20px;
     font-weight: bold;
 }
 
-/* Bouton de recherche avec texte - visible en version desktop */
 .button-search {
     background-color: var(--primary-blue);
     font-family: inherit;
@@ -135,45 +153,56 @@ h1 {
     cursor: pointer;
 }
 
- .section-filters {
+.fa-search {
+    display: none;
+}
+
+.all-filters {
+    position: relative;
     font-weight: bold;
 }
 
-.section-filters h3 {
-    padding: 20px;
+.all-filters h3 {
+    position: absolute;
+    align-self: baseline;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.all-filters div {
+    flex-wrap: wrap;
+}
+
+.filter:first-of-type {
+    margin-left: 115px;
 }
 
 .filter {
-    height: 50px;
-    border-top: 3px solid var(--primary-grey);
-    border-right: 3px solid var(--primary-grey);
-    border-bottom: 3px solid var(--primary-grey);
-    border-radius: 25px;
     margin: 15px;
-}
-
-.filter:hover {
-    background-color: var(--secondary-blue);
-    border-top: 3px solid var(--secondary-blue);
-    border-right: 3px solid var(--secondary-blue);
-    border-bottom: 3px solid var(--secondary-blue);
-    cursor: pointer;
-}
-
-button {
-    padding: 10px 20px;
+    height: 50px;
+    padding: 0;
     font-family: inherit;
     font-size: 18px;
     font-weight: bold;
     background-color: white;
     border: 0;
-    border-radius: 0 25px 25px 0;
     cursor: pointer;
+    border-top: var(--border-grey-3pixels);
+    border-right: var(--border-grey-3pixels);
+    border-bottom: var(--border-grey-3pixels);
+    border-radius: 25px;
 }
 
-.filter:hover button {
+.all-filters span {
+    padding: 0 20px;
+}
+
+.filter:hover {
     background-color: var(--secondary-blue);
-    
+    border-top: var(--border-sec-blue-3pixels);
+    border-right: var(--border-sec-blue-3pixels);
+    border-bottom: var(--border-sec-blue-3pixels);
+    cursor: pointer;
 }
 
 .filter-icons {
@@ -185,13 +214,17 @@ button {
 
 .fa-info {
     height: 30px;
-    width: 30px;
-    border: 2px solid var(--primary-grey);
+    min-width: 30px;
+    border: var(--border-grey-2pixels);
     border-radius: 15px;
     margin: 0 10px;
 }
 
-.info p {
+.information {
+    margin: 15px 0;
+}
+
+.information p {
     padding: 0;
 }
 
@@ -199,18 +232,17 @@ button {
     white-space: nowrap;
 }
 
-/* Styles de la section
- Hébergements ********/
-
- #accomodations {
-     margin-bottom: 20px;
+/** Styles de la section Hébergements **/
+#section-accomodations {
+    margin-top: 20px;
+     margin-bottom: 40px;
  }
 
- #accomodations a {
+#section-accomodations a {
     margin: 15px 0;
 }
 
-#accomodations h2 {
+#section-accomodations h2 {
     margin-top: 20px;
     margin-bottom: 10px;
 }
@@ -219,24 +251,25 @@ button {
     flex: 2;
     background-color: var(--primary-grey);
     border-radius: 30px;
-    margin: 1.5% 2.3% 1.5% 0;
-    padding: 1.5% 2.6%;
+    margin-right: 30px;
+    padding: 20px 30px;
 }
 
 .list-accomodations a {
-    width: 31%;
+    width: 30%;
 }
 
 .card-accomodation {
+    height: 100%;
     background-color: white;
-    border: 5px solid white;
+    border: var(--border-white-5pixels);
     border-radius: 30px;
 }
 
 .picture-box-accomodation {
-    margin: 0;
     height: 130px;
     border-radius: 25px 25px 0 0;
+    overflow: hidden;
 }
 
 .card-accomodation img {
@@ -246,8 +279,17 @@ button {
     border-radius: 25px 25px 0 0;
 }
 
-.price, .card-accomodation h3, .card-accomodation div {
-    padding: 5px 0 5px 10px;
+.description-accomodation {
+    flex: 1;
+    padding-left: 15px;
+}
+
+.description-accomodation h3 {
+    padding-left: 0;
+}
+
+.five-stars {
+    padding-top: 5px;
 }
 
  .star-grey {
@@ -256,33 +298,36 @@ button {
 
 .panel-accomodations h3:last-child {
     font-size: 20px;
-    margin-top: 3%;
+    margin-top: 20px;
 }
 
 .panel-populars {
     flex: 1;
     background-color: var(--primary-grey);
     border-radius: 30px;
-    margin: 1.5% 0;
-    padding: 1.5% 2.6%;
+    padding: 20px 30px;
 }
 
 .panel-populars a {
     width: 100%;
 }
 
+.fa-chart-line {
+    margin-top: 10px;
+}
+
 .card-popular {
     width: 100%;
     background-color: white;
-    border: 5px solid white;
+    border: var(--border-white-5pixels);
     border-radius: 30px;
 }
 
 .picture-box-popular {
-    margin: 0;
     height: 160px;
     width: 40%;
     border-radius: 25px 0 0 25px;
+    overflow: hidden;
 }
 
 .picture-box-popular img {
@@ -297,89 +342,86 @@ button {
     height: 160px;
 }
 
-.description-popular h3, .description-popular p, .description-popular div {
+.description-popular div {
     padding-left: 20px;
 }
 
 .description-popular h3 {
-    margin-top: 10px;
+    margin-top: 5px;
+    padding-left: 0;
 }
 
 .description-popular div {
-    margin-top: 20%;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
-/* Styles de la section
- Activités ********/
-
-#activities {
-    margin-bottom: 80px;
-    padding: 0 5px;
+/** Styles de la section  Activités **/
+#section-activities {
+    margin-bottom: 60px;
 }
 
-.activities-list {
+.list-activities {
     width: 100%;
-    height: 500px;
 }
 
-.bloc-activities {
+.block-activities {
     width: 22%;
+    border-radius: 30px;
+}
+
+.block-activities a {
+    border-radius: 30px;
 }
 
 .card-activities-full,
 .card-activities-two-thirds,
 .card-activities-one-third,
-.card-activities-upper-half,
-.card-activities-lower-half {
+.card-activities-half {
     border-radius: 30px;
 }
 
-.card-activities-two-thirds, .card-activities-upper-half {
+.upper-card {
     margin-bottom: 40px;
 }
 
 .picture-box-activities-full {
     height: 390px;
+    border-radius: 30px 30px 0 0;
+    overflow: hidden;
 }
 
 .picture-box-activities-two-thirds {
     height: 190px;
+    border-radius: 30px 30px 0 0;
+    overflow: hidden;
 }
 
 .picture-box-activities-one-third {
     height: 100px;
+    border-radius: 30px 30px 0 0;
+    overflow: hidden;
 }
 
-.picture-box-activities-upper-half {
+.picture-box-activities-half {
     height: 145px;
+    border-radius: 30px 30px 0 0;
+    overflow: hidden;
 }
 
-.picture-box-activities-lower-half {
-    height: 145px;
-}
-
-.card-activities-full img,
-.card-activities-two-thirds img,
-.card-activities-one-third img,
-.card-activities-upper-half img,
-.card-activities-lower-half img {
+.list-activities img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 30px 30px 0 0;
 }
 
-.activities-list h3 {
+.list-activities h3 {
     height: 60px;
-    line-height: 60px;
     padding: 0 20px;
+    border-radius: 0 0 30px 30px;
 }
 
-/*************************************
-********** Styles du footer **********
-*************************************/
-
+/********** Styles du footer **********/
 footer {
     background-color: var(--primary-grey);
     padding: 50px 0;
@@ -388,12 +430,12 @@ footer {
 .footer-content {
     max-width: 1920px;
     width: 100%;
-    margin: 0 auto;
     padding: 0 66px;
 }
 
 .footer-content div {
-    margin: 0 20% 0 0;
+    max-width: 33%;
+    margin: 0 auto 0 0;
 }
 
 footer h3 {
@@ -402,8 +444,7 @@ footer h3 {
 }
 
 footer ul {
-    margin: 0;
-    padding: 0;
+    padding-left: 0;
 }
 
 footer li {

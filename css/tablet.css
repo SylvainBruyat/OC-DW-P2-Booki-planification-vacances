@@ -1,0 +1,51 @@
+/********** Styles du header **********/
+header {
+    max-width: 800px;
+}
+
+/********** Styles du main **********/
+main {
+    max-width: 800px;
+}
+
+/** Styles de la section Recherche et filtre **/
+.information {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+/** Styles de la section Hébergements **/
+#section-accomodations {
+    width: 100%;
+    margin-bottom: 0;
+    flex-direction: column-reverse;
+}
+
+.panel-accomodations {
+    margin-top: 30px;
+    margin-right: 0;
+}
+
+/** Styles de la section  Activités **/
+#section-activities {
+    margin-top: 30px;
+    padding: 0;
+}
+.list-activities {
+    flex-wrap: wrap;
+}
+
+.block-activities {
+    width: 46%;
+    margin-bottom: 40px;
+}
+
+.picture-box-activities-two-thirds,
+.picture-box-activities-one-third {
+    height: 145px;
+}
+
+/********** Styles du footer **********/
+.footer-content {
+    max-width: 800px;
+}

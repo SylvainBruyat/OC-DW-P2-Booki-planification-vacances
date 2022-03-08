@@ -1,0 +1,210 @@
+/********** Styles du header **********/
+header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+header a {
+    margin: 0 auto;
+}
+
+nav {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+nav ul {
+    width: 100%;
+    padding: 0;
+}
+
+nav li {
+    width: 50%;
+    display: flex;
+}
+
+nav a {
+    width: 100%;
+    padding: 30px 0;
+    border-bottom: 4px solid var(--primary-grey);
+    text-align: center;
+}
+
+.active-menu {
+    color: var(--primary-blue);
+    border-top: none;
+    border-bottom: 4px solid var(--primary-blue);
+}
+
+nav a:hover {
+    color: var(--primary-blue);
+    border-top: none;
+    border-bottom: 4px solid var(--primary-blue);
+}
+
+/********** Styles du main **********/
+main {
+    margin: 0;
+    padding: 0;
+}
+
+/** Styles de la section Recherche et filtre **/
+.section-search-filter {
+    max-width: 450px;
+    margin-bottom: 50px;
+    padding: 0 30px;
+}
+
+h1, .section-search-filter p {
+    padding: 5px 0;
+}
+
+.form-search {
+    padding: 40px 0;
+}
+
+#location {
+    max-width: 220px;
+    border-right: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.button-search {
+    min-width: 60px;
+    margin-left: -15px;
+    padding: 0;
+    border-radius: 15px;
+}
+
+.button-search-text {
+    display: none;
+}
+
+.fa-search {
+    color: white;
+    display: initial;
+}
+
+.all-filters {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.all-filters h3 {
+    position: initial;
+    margin-top: 0;
+    padding: 10px 0;
+}
+
+.filter {
+    margin: 10px 10px 10px 0;
+}
+
+.filter:first-of-type {
+    margin-left: 0;
+}
+
+.information {
+    margin-top: 30px;
+}
+
+.fa-info {
+    margin-left: 0;
+}
+
+/** Styles de la section Hébergements **/
+#section-accomodations {
+    width: 100%;
+    margin-bottom: 0;
+    flex-direction: column-reverse;
+}
+
+#section-accomodations a {
+    margin: 10px 0;
+}
+
+.panel-populars {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 0;
+}
+
+.mobile-width {
+    max-width: 390px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.panel-accomodations {
+    max-width: 450px;
+    width: 100%;
+    margin: 10px auto;
+    padding: 30px 30px;
+    background-color: white;
+}
+
+.list-accomodations {
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.list-accomodations a {
+    width: 100%;
+}
+
+.panel-accomodations h3:last-child {
+    margin-top: 0;
+    padding-left: 0;
+}
+
+/** Styles de la section  Activités **/
+#section-activities {
+    max-width: 450px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 0 30px;
+}
+
+.list-activities {
+    padding-top: 20px;
+    flex-direction: column;
+}
+
+.block-activities {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.upper-card {
+    margin-bottom: 30px;
+}
+
+.picture-box-activities-full,
+.picture-box-activities-two-thirds,
+.picture-box-activities-one-third,
+.picture-box-activities-half {
+    height: 160px;
+}
+
+/********** Styles du footer **********/
+footer {
+    padding: 0 0 40px 0;
+}
+
+.footer-content {
+    max-width: 450px;
+    padding: 0 30px;
+    flex-direction: column;
+}
+
+.footer-content div {
+    max-width: 100%;
+}
+
+footer h3 {
+    margin: 50px 0 25px 0;
+}
