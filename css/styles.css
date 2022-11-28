@@ -106,7 +106,7 @@ h1 {
 }
 
 /* Couleur par défaut des icônes */
-.fas {
+.fa-solid {
     color: var(--primary-blue);
 }
 
@@ -118,7 +118,7 @@ h1 {
     padding: 15px 10px;
 }
 
-.fa-map-marker-alt {
+.fa-location-dot {
     width: 60px;
     background-color: var(--primary-grey);
     font-size: 20px;
@@ -151,7 +151,7 @@ h1 {
     cursor: pointer;
 }
 
-.fa-search {
+.fa-magnifying-glass {
     display: none;
 }
 
@@ -291,7 +291,7 @@ h1 {
     width: 100%;
 }
 
-.fa-chart-line {
+.fa-arrow-trend-up {
     margin-top: 10px;
 }
 
